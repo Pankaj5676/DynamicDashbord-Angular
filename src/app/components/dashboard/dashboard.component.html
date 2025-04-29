@@ -19,15 +19,14 @@
       <div
         class="widget-card"
         *ngFor="let widget of widgets; let i = index"
-        cdkDrag
-        
+        cdkDrag  
       >
-
+      <div class="drag-handle" cdkDragHandle>☰</div>
       <ng-container *ngIf="componentMap[widget.type]">
         <ng-container *ngComponentOutlet="componentMap[widget.type]"></ng-container>
       </ng-container>
+      <div class="resize-handle" cdkDragDisabled></div>
         <button (click)="removeWidget(i)">Remove</button>
       </div>
     </div>
  </div>
-  

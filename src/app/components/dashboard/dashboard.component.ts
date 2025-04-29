@@ -6,17 +6,19 @@ import { CommonModule } from '@angular/common';
 import{ Chart,registerables} from 'chart.js'
 import { CdkDragDrop, DragDropModule ,moveItemInArray} from '@angular/cdk/drag-drop'
 import { NewComponentComponent } from '../../new-component/new-component.component';
+import { ResizableModule, ResizeEvent,ResizableDirective } from 'angular-resizable-element';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [CommonModule,DragDropModule],
+  imports: [CommonModule,DragDropModule,ResizableModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
 
 
-  widgets: { type: string }[] = [];
+  widgets: { type: string; width: number; height: number }[] = [];
+
   
 
   // widgets = [
@@ -51,17 +53,21 @@ export class DashboardComponent {
   }
 
   addWidget(type: string) {
-    //this.widgets.push({ type });
-
-    const widgetExists = this.widgets.some(widget => widget.type === type);
-
+    const widgetExists = this.widgets.some((widget) => widget.type === type);
     if (!widgetExists) {
-      this.widgets.push({ type });
+      this.widgets.push({ type, width: 300, height: 200 });
     } else {
       alert(`${type} widget already added!`);
     }
+  }
+  
 
-
+  onResizeEnd(event: ResizeEvent, index: number): void {
+    const { rectangle } = event;
+    if (rectangle && rectangle.width && rectangle.height) {
+      this.widgets[index].width = rectangle.width;
+      this.widgets[index].height = rectangle.height;
+    }
   }
 
 
