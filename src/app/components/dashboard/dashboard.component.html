@@ -1,0 +1,10 @@
+<div class="dashboard-container">
+    <h1>Dynamic Dashboard</h1>
+    <div class="widget-container">
+        <div class="widget-card" *ngFor="let widget of widgets">
+          <ng-container *ngComponentOutlet="componentMap[widget.type]"></ng-container>
+        </div>
+      </div>
+  </div>
+  
+  
