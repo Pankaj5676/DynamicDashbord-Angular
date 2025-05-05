@@ -8,7 +8,7 @@
 
   <div class="saved-dashboards">
     <h3>Saved Dashboards:</h3>
-    <select [(ngModel)]="selectedDashboard" (change)="loadDashboard(selectedDashboard)">
+    <select [(ngModel)]="selectedDashboard" (change)="loadDashboard(selectedDashboard)" >
       <option *ngFor="let name of savedDashboardNames" [value]="name">
         {{ name }}
       </option>
@@ -30,11 +30,12 @@
       [cdkDragBoundary]="'.widget-container'"
 
     >
+    <button (click)="removeWidget(i)" class="remove-btn">✖</button>
       <div class="drag-handle" cdkDragHandle>☰</div>
       <ng-container *ngIf="componentMap[widget.type]">
         <ng-container *ngComponentOutlet="componentMap[widget.type]"></ng-container>
       </ng-container>
-      <button (click)="removeWidget(i)">Remove</button>
+      
     </div>
   </div>
 </div>

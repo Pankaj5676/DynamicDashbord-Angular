@@ -1,94 +1,206 @@
+// .dashboard-container {
+//     padding: 2rem;
+//     max-width: 1200px;
+//     margin: auto;
+//     font-family: 'Segoe UI', sans-serif;
+//   }
+  
+//   h1 {
+//     text-align: center;
+//     margin-bottom: 2rem;
+//     color: #2c3e50;
+//   }
+  
+//   .widgets-grid {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+//     gap: 1.5rem;
+//   }
+
+//   .widget-container {
+//     display: flex;
+//     flex-wrap: wrap;
+//     gap: 1rem;
+//     justify-content: center;
+//     padding: 1rem;
+//   }
+  
+  
+//   .widget-card:hover {
+//     transform: scale(1.03);
+//   }
+  
+//   .widget-card h3 {
+//     margin-bottom: 0.5rem;
+//     color: #1abc9c;
+//   }
+  
+//   /* Hover effect */
+//   .widget-card:hover {
+//     transform: translateY(-5px);
+//     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+//   }
+  
+//   /* Make content centered in widgets */
+//   .widget-card h2 {
+//     font-size: 1.2rem;
+//     font-weight: 600;
+//     margin-bottom: 1rem;
+//     text-align: center;
+//   }
+  
+//   /* Mobile-first responsiveness */
+//   @media (max-width: 768px) {
+//     // .widget-card {
+//     //   min-width: 100%;
+//     // }
+  
+//     .widget-container {
+//       padding: 1rem;
+//     }
+//   }
+
+//   .add-widget-button-container {
+//     display: flex;
+//     gap: 10px;
+//     margin-bottom: 20px;
+//   }
+  
+//   .add-widget-button-container button {
+//     padding: 10px;
+//     background-color: #3f51b5;
+//     color: white;
+//     border: none;
+//     cursor: pointer;
+//   }
+  
+//   .add-widget-button-container button:hover {
+//     background-color: #2c387e;
+//   }
+
+//   .widget-container {
+//     display: flex;
+//     flex-wrap: wrap; 
+//     gap: 20px;
+//     width: 100%;
+//     padding: 30px;
+//   flex-direction: row;
+
+//   }
+//   .widget-card {
+//     position: relative;
+//   resize: both;
+//   overflow: auto;
+//   min-width: 200px;
+//   min-height: 150px;
+//   padding: 1rem;
+//   border: 1px solid #ccc;
+//   border-radius: 8px;
+//   background: #fff;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//   flex: 0 0 auto;
+//   display: inline-block;
+//   }
+//   .resize-handle {
+//     cursor: move;
+//   padding: 4px 8px;
+//   font-weight: bold;
+//   background-color: #e0e0e0;
+//   margin-bottom: 10px;
+//   border-radius: 4px;
+//   user-select: none;
+//   }
+  
+  
+//   .widget-card::after {
+//     content: '';  
+//     position: absolute;
+//     right: 5px; 
+//     bottom: 5px;
+//     width: 15px;
+//     height: 15px;
+//     border-radius: 50%;  
+//     cursor: se-resize; 
+//   }
+
+//   .saved-dashboards {
+//     margin: 20px 0;
+//   }
+  
+//   .saved-dashboards h3 {
+//     margin-bottom: 8px;
+//     font-size: 18px;
+//     color: #333;
+//   }
+  
+//   .saved-dashboards select {
+//     padding: 8px 12px;
+//     border: 1px solid #ccc;
+//     border-radius: 6px;
+//     font-size: 14px;
+//     background-color: #fff;
+//     transition: border-color 0.3s ease;
+//     min-width: 200px;
+//   }
+  
+//   .saved-dashboards select:focus {
+//     outline: none;
+//     border-color: #007bff;
+//     box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+//   }
+  
+////////////////////////////////////
+/// 
+
 .dashboard-container {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: auto;
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #2c3e50;
-  }
-  
-  .widgets-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-  .widget-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    padding: 1rem;
-  }
-  
-  
-  .widget-card:hover {
-    transform: scale(1.03);
-  }
-  
-  .widget-card h3 {
-    margin-bottom: 0.5rem;
-    color: #1abc9c;
-  }
-  
-  /* Hover effect */
-  .widget-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Make content centered in widgets */
-  .widget-card h2 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  
-  /* Mobile-first responsiveness */
-  @media (max-width: 768px) {
-    // .widget-card {
-    //   min-width: 100%;
-    // }
-  
-    .widget-container {
-      padding: 1rem;
-    }
-  }
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
 
-  .add-widget-button-container {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .add-widget-button-container button {
-    padding: 10px;
-    background-color: #3f51b5;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .add-widget-button-container button:hover {
-    background-color: #2c387e;
-  }
+.widgets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
 
-  .widget-container {
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 20px;
-    width: 100%;
-    padding: 30px;
-  flex-direction: row;
+.add-widget-button-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
 
-  }
-  .widget-card {
-    position: relative;
+.add-widget-button-container button {
+  padding: 10px;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.add-widget-button-container button:hover {
+  background-color: #2c387e;
+}
+
+/* 🆕 Simplified and unified widget-container */
+.widget-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 1rem;
+  align-items: flex-start; /* 🆕 keep alignment */
+}
+
+/* Updated to remove duplicate definition */
+.widget-card {
+  position: relative;
   resize: both;
   overflow: auto;
   min-width: 200px;
@@ -100,52 +212,120 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex: 0 0 auto;
   display: inline-block;
-  }
-  .resize-handle {
-    cursor: move;
+  box-sizing: border-box; /* 🆕 ensure border+padding inside width */
+}
+
+/* 🆕 Prevent resizing beyond container */
+.widget-card:focus-within {
+  outline: 2px dashed #3f51b5;
+}
+
+.widget-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.widget-card h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.widget-card h3 {
+  margin-bottom: 0.5rem;
+  color: #1abc9c;
+}
+
+.drag-handle {
+  cursor: move;
   padding: 4px 8px;
   font-weight: bold;
   background-color: #e0e0e0;
   margin-bottom: 10px;
   border-radius: 4px;
   user-select: none;
-  }
-  
-  
-  .widget-card::after {
-    content: '';  
-    position: absolute;
-    right: 5px; 
-    bottom: 5px;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;  
-    cursor: se-resize; 
+}
+
+.widget-card::after {
+  content: '';
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: se-resize;
+}
+
+/* 🆕 Added to avoid overlap when resizing */
+.widget-container > .widget-card {
+  max-width: 100%;
+}
+
+/* 🆕 Add a constraint to avoid dragging outside parent */
+.cdk-drag-preview {
+  z-index: 1000;
+}
+
+/* 🆕 Fix possible layout shift while dragging */
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.saved-dashboards {
+  margin: 20px 0;
+}
+
+.saved-dashboards h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: #333;
+}
+
+.saved-dashboards select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+  min-width: 200px;
+}
+
+.saved-dashboards select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+/* 🆕 Mobile improvement */
+@media (max-width: 768px) {
+  .widget-container {
+    flex-direction: column; /* 🆕 stack widgets vertically on small screens */
+    align-items: center;
   }
 
-  .saved-dashboards {
-    margin: 20px 0;
+  .widget-card {
+    width: 100% !important; /* 🆕 make widgets full width in mobile */
+    min-width: unset;
   }
-  
-  .saved-dashboards h3 {
-    margin-bottom: 8px;
-    font-size: 18px;
-    color: #333;
-  }
-  
-  .saved-dashboards select {
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
-    background-color: #fff;
-    transition: border-color 0.3s ease;
-    min-width: 200px;
-  }
-  
-  .saved-dashboards select:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
-  }
-  
+}
+
+.remove-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 15px;
+  margin-right: 4px;
+}
