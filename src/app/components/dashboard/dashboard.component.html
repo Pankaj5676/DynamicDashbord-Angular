@@ -1,25 +1,38 @@
-
 <div class="dashboard-container">
-    <h1>Dynamic Dashboard</h1>
-    <div class="add-widget-button-container">
-      <button *ngFor="let widget of availableWidgets" (click)="addWidget(widget.type)">
-        Add {{ widget.type | titlecase }} Widget
-      </button>
-    </div>
-  
-    <div cdkDropList class="widget-container" [cdkDropListOrientation]="'horizontal'" (cdkDropListDropped)="drop($event)" >
-      <div
-        class="widget-card"
-        *ngFor="let widget of widgets; let i = index"
-        cdkDrag 
-        [cdkDragBoundary]="'.widget-container'" 
-      >
+  <h1>Dynamic Dashboard</h1>
+
+  <div class="dashboard-save-container">
+    <input type="text" [(ngModel)]="dashboardName" placeholder="Enter dashboard name" />
+    <button (click)="saveDashboard()">Save Dashboard</button>
+  </div>
+
+  <div class="saved-dashboards">
+    <h3>Saved Dashboards:</h3>
+    <button *ngFor="let name of savedDashboardNames" (click)="loadDashboard(name)">
+      {{ name }}
+    </button>
+  </div>
+
+  <div class="add-widget-button-container">
+    <button *ngFor="let widget of availableWidgets" (click)="addWidget(widget.type)">
+      Add {{ widget.type | titlecase }} Widget
+    </button>
+  </div>
+
+  <div cdkDropList class="widget-container" [cdkDropListOrientation]="'horizontal'" (cdkDropListDropped)="drop($event)">
+    <div
+      class="widget-card"
+      *ngFor="let widget of widgets; let i = index"
+      cdkDrag
+      [cdkDragBoundary]="'.widget-container'"
+      [style.width.px]="widget.width"
+      [style.height.px]="widget.height"
+    >
       <div class="drag-handle" cdkDragHandle>☰</div>
       <ng-container *ngIf="componentMap[widget.type]">
         <ng-container *ngComponentOutlet="componentMap[widget.type]"></ng-container>
       </ng-container>
-      <div class="resize-handle" cdkDragDisabled></div>
-        <button (click)="removeWidget(i)">Remove</button>
-      </div>
+      <button (click)="removeWidget(i)">Remove</button>
     </div>
- </div>
+  </div>
+</div>
