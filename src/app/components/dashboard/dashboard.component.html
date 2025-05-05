@@ -21,12 +21,12 @@
 
   <div cdkDropList class="widget-container" [cdkDropListOrientation]="'horizontal'" (cdkDropListDropped)="drop($event)">
     <div
+    #widgetCard
       class="widget-card"
       *ngFor="let widget of widgets; let i = index"
       cdkDrag
       [cdkDragBoundary]="'.widget-container'"
-      [style.width.px]="widget.width"
-      [style.height.px]="widget.height"
+
     >
       <div class="drag-handle" cdkDragHandle>☰</div>
       <ng-container *ngIf="componentMap[widget.type]">
