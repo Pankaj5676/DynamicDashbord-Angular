@@ -122,3 +122,30 @@
     border-radius: 50%;  
     cursor: se-resize; 
   }
+
+  .saved-dashboards {
+    margin: 20px 0;
+  }
+  
+  .saved-dashboards h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .saved-dashboards select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+    min-width: 200px;
+  }
+  
+  .saved-dashboards select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+  }
+  

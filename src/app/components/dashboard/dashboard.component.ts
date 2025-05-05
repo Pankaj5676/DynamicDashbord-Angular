@@ -40,6 +40,7 @@ export class DashboardComponent implements OnInit{
   savedDashboards: { [key: string]: Widget[] } = {};
 
   widgets: Widget[] = [];
+  selectedDashboard: string = '';
 
 
 //widgets: { type: string; width: number; height: number; x: number; y: number }[] = [];
@@ -149,6 +150,10 @@ export class DashboardComponent implements OnInit{
     this.savedDashboardNames = keys
       .filter((key) => key.startsWith('dashboard_'))
       .map((key) => key.replace('dashboard_', ''));
+
+      if (this.savedDashboardNames.length > 0) {
+        this.selectedDashboard = this.savedDashboardNames[0];
+      }
   }
 
 }

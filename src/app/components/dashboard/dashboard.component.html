@@ -8,9 +8,11 @@
 
   <div class="saved-dashboards">
     <h3>Saved Dashboards:</h3>
-    <button *ngFor="let name of savedDashboardNames" (click)="loadDashboard(name)">
-      {{ name }}
-    </button>
+    <select [(ngModel)]="selectedDashboard" (change)="loadDashboard(selectedDashboard)">
+      <option *ngFor="let name of savedDashboardNames" [value]="name">
+        {{ name }}
+      </option>
+    </select>
   </div>
 
   <div class="add-widget-button-container">
